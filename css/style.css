@@ -1,0 +1,40 @@
+.user-icon{
+    width: 30px;
+    border: 100%;
+} 
+body{
+    background-image: url(./image/desktop-wallpaper-airplane-phone-air-phone.jpg);
+}
+:root{
+   --offcanvas-width:270px;
+   --topNavnarHight:56px;
+}
+.sidebar-nav{
+    width:var(--offcanvas-width) !important;
+}
+.sidebar-link.user-icon{
+    transition: 0.6ms;
+}
+
+.sidebar-link[aria-expanded="true"].right-icon{
+    transform: rotate(180deg);
+}
+@media(min-width:992px){
+    .offcanvas-backdrop{
+        display:none !important ;
+    }
+    .sidebar-nav{
+        transform: none !important;
+        visibility: visible;
+        top: var(--topNavnarHight) !important;
+    }
+    main{
+    margin-left: var(--offcanvas-width);
+    }
+
+}
+@media(max-width:480px){
+    .dashboard.counts-card{
+        margin-bottom: 20;
+    }
+}
